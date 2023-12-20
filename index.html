@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class ='left-side'>
+        <div class="logo-area">
+            <div class="logo"> <img src="logo.png" alt="odin logo" width="100px" height="100px"></div>
+            <div class="logo-text">ODIN</div>
+        </div>
+    </div>
+    <div class="right-side">
+        <div class="introduction-text">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up now and get started.<br><br> You know you want to</div>
+        <div class="form-container">
+                       <div class="form-text">Let's do this!</div>
+            <form action="#" method="post" class="form">
+                <div class="first-name-field form-field">
+                    <label for="first-name">First name:*</label>
+                    <input type="text" id="first-name" name="first-name" required>
+                </div>
+                <div class="last-name-field form-field">
+                    <label for="last-name">Last name:*</label>
+                    <input type="text" id="last-name" name="last-name" required>
+                </div>
+                <div class="email-field form-field">
+                    <label for="email-field">EMAIL:*</label>
+                    <input type="email" id="email-field" name="email" required>
+                </div>
+                <div class="phone-field form-field">
+                    <label for="phone-field">Phone number:*</label>
+                    <input type="tel" id="phone-field" name="phone-number" required>
+                </div>
+                <div class="password-field form-field">
+                    <label for="password-field">Password:*</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="confirm-password-field form-field">
+                    <label for="confirm-password">Confirm Password:*</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+    var form = document.querySelector('.form');
+    form.addEventListener('submit', function (event) {
+        var password = document.getElementById('password').value;
+        var confirmPassword = document.getElementById('confirm-password').value;
+
+        if (password !== confirmPassword) {
+            alert('Passwords do not match. Please try again.');
+            event.preventDefault();
+        }
+    });
+});
+    </script>
+    
+</body>
+</html>
